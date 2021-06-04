@@ -19,18 +19,6 @@ public class BuildingController {
         this.buildingService = buildingService;
     }
 
-    @GetMapping("/buildings")
-    public ResponseEntity<List<Building>> getAllBuildings() {
-        List<Building> buildings =  buildingService.getAllBuildings();
-        return new ResponseEntity<>(buildings, HttpStatus.OK);
-    }
-
-    @GetMapping("/buildings/{buildingNumber}")
-    public ResponseEntity<Building> findBuildingById(@PathVariable("buildingNumber") String buildingNumber) {
-        var building =  buildingService.findBuildingById(buildingNumber);
-        return new ResponseEntity<>(building, HttpStatus.OK);
-    }
-
     @PostMapping("/buildings")
     public ResponseEntity<Building> addBuilding(@RequestBody Building building) {
         var newBuilding = buildingService.addBuilding(building);
@@ -39,14 +27,32 @@ public class BuildingController {
 
     @PutMapping("/buildings")
     public ResponseEntity<Building> updateBuilding(@RequestBody Building building) {
-        var updateEmployee = buildingService.updateBuilding(building);
-        return new ResponseEntity<>(updateEmployee, HttpStatus.OK);
+        var updateBuilding = buildingService.updateBuilding(building);
+        return new ResponseEntity<>(updateBuilding, HttpStatus.OK);
     }
 
     @DeleteMapping("/buildings/{id}")
     public ResponseEntity<Building> deleteBuildingById(@PathVariable("id") Long id) {
         buildingService.deleteBuildingById(id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("/buildings")
+    public ResponseEntity<List<Building>> getAllBuildings() {
+        List<Building> buildings =  buildingService.getAllBuildings();
+        return new ResponseEntity<>(buildings, HttpStatus.OK);
+    }
+
+    @GetMapping("/buildings/{buildingNumber}")
+    public ResponseEntity<Building> getBuildingById(@PathVariable("buildingNumber") String buildingNumber) {
+        var building =  buildingService.getBuildingById(buildingNumber);
+        return new ResponseEntity<>(building, HttpStatus.OK);
+    }
+
+    @GetMapping("/buildings/public")
+    public ResponseEntity<List<Building>> getPublicBuildings(Boolean publicAccess) {
+        List<Building>  building =  buildingService.getPublicBuildings(publicAccess);
+        return new ResponseEntity<>(building, HttpStatus.OK);
     }
 
 }

@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Getter
 @Setter
@@ -18,13 +19,18 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(optional =false, fetch=FetchType.EAGER)
     private Building building;
 
+    @Basic(optional = false)
+    @Column(unique = true)
     private String roomNumber;
 
+    @Basic(optional = false)
+    @Size(min = 1, max = 9999)
     private Integer seats;
 
+    @Basic(optional = false)
     private Boolean projectorPresent;
 
     public Room(Building building, String roomNumber, Integer seats, Boolean projectorPresent) {

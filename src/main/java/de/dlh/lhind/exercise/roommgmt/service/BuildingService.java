@@ -24,21 +24,25 @@ public class BuildingService {
         return buildingRepository.save(building);
     }
 
-    public List<Building> getAllBuildings() {
-        return buildingRepository.findAll();
-    }
-
-    public Building findBuildingById(String buildingNumber) {
-        return buildingRepository.findBuildingById(buildingNumber)
-                .orElseThrow(() -> new NotFoundException("Building by number " + buildingNumber + " was not found"));
-    }
-
     public Building updateBuilding(Building building) {
         return buildingRepository.save(building);
     }
 
     public void deleteBuildingById(Long id) {
         buildingRepository.deleteBuildingById(id);
+    }
+
+    public List<Building> getAllBuildings() {
+        return buildingRepository.findAll();
+    }
+
+    public Building getBuildingById(String buildingNumber) {
+        return buildingRepository.getBuildingById(buildingNumber)
+                .orElseThrow(() -> new NotFoundException("Building by number " + buildingNumber + " was not found"));
+    }
+
+    public List<Building> getPublicBuildings(Boolean publicAccess) {
+        return buildingRepository.getPublicBuildings(publicAccess);
     }
 
 }
