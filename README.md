@@ -1,7 +1,7 @@
 # Übungsprojekt "Room Management"
 
 # Wiki
-* [Wiki](https://github.com/facebook/react/wiki/Sites-Using-React)
+* [Wiki](https://github.com/senoramarillo/roommgmt-exercise/wiki)
 
 # Git Struktur
 * [./src/](src/) - Source code
