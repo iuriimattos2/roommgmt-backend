@@ -1,7 +1,7 @@
 # Übungsprojekt "Room Management"
 
 # Git Struktur
-* [./src/](roommgmt-exercise/src/) - Source code
+* [./src/](src/) - Source code
 
 Dies ist das Basisprojekt für die "Room Management"-Übung. Ziel dieser Übung ist der Einsatz der in den vorherigen
 Schulungen vermittelten Inhalte zu den Themen Architektur und Entwicklung mit dem Spring-Framework. Dabei werden
