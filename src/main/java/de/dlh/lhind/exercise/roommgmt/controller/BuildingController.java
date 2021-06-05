@@ -14,6 +14,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@RequestMapping("/")
 public class BuildingController {
 
     private final BuildingService buildingService;
@@ -50,7 +51,7 @@ public class BuildingController {
             response = Building.class,
             responseContainer = "List",
             produces = "application/json")
-    @GetMapping("/buildings")
+    @GetMapping(value = {"", "/", "/buildings"})
     public ResponseEntity<List<Building>> getAllBuildings() {
         LOGGER.info("Get All Buildings");
         List<Building> buildings = buildingService.getAllBuildings();
@@ -65,9 +66,9 @@ public class BuildingController {
     }
 
     @GetMapping("/buildings/public")
-    public ResponseEntity<List<Building>> getPublicBuildings(Boolean publicAccess) {
+    public ResponseEntity<List<Building>> getPublicBuildings() {
         LOGGER.info("Get All Public Buildings");
-        List<Building> building = buildingService.getPublicBuildings(publicAccess);
+        List<Building> building = buildingService.getPublicBuildings();
         return new ResponseEntity<>(building, HttpStatus.OK);
     }
 

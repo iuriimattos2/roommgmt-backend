@@ -41,8 +41,8 @@ public class BuildingService {
                 .orElseThrow(() -> new ResourceNotFoundException("Building by number " + buildingNumber + " was not found"));
     }
 
-    public List<Building> getPublicBuildings(Boolean publicAccess) {
-        return buildingRepository.getPublicBuildings(publicAccess);
+    public List<Building> getPublicBuildings() {
+        return buildingRepository.getPublicBuildings();
     }
 
 }

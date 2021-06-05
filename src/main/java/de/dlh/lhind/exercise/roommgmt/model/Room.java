@@ -29,7 +29,7 @@ public class Room {
     private String roomNumber;
 
     @Basic(optional = false)
-    @Size(min = 1, max = 9999, message = "Amount of seats must be between 1 and 9999.")
+    @Size(min = 1, max = 9999, message = "Amount of seats must be between 1 and 9999")
     private Integer seats;
 
     @Basic(optional = false)

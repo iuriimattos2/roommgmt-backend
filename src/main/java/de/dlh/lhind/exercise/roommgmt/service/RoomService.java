@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -39,6 +40,20 @@ public class RoomService {
 
     public List<Room> getAllRooms() {
         return roomRepository.findAll();
+    }
+
+    public List<Object> geAllRoomsOfBuilding(String buildingNumber) {
+        return roomRepository.geAllRoomsOfBuilding(buildingNumber);
+    }
+
+    public Object getBuildingAndRoomById(String buildingNumber, String roomNumber) {
+        return roomRepository.getBuildingAndRoomById(buildingNumber, roomNumber)
+                .orElseThrow(() -> new ResourceNotFoundException
+                        ("Building or Room by buildingNumber " + buildingNumber + " roomNumber: " + roomNumber + " was not found"));
+    }
+
+    public List<Room> getPublicRooms() {
+        return roomRepository.getPublicRooms();
     }
 
 }
