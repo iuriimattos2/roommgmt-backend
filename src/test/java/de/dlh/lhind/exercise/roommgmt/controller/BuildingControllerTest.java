@@ -32,13 +32,13 @@ class BuildingControllerTest {
 
     private static final Long BUILDING_ID = 1L;
     public static final String BUILDING_NUMBER = "001";
-    public static final String MODIFIED_BUILDING_NUMBER = "008";
+    public static final String MODIFIED_BUILDING_NUMBER = "002";
     public static final String BUILDING_DESCRIPTION_STRING = "Zentrale";
     public static final Boolean PUBLIC_ACCESS = true;
     public static final String BUILDING_URL = "/buildings/";
 
     @Test
-    void shouldReturnAllBuildings_whenFindAll_givenValidGetRequest() throws Exception {
+    void shouldReturnAllBuildings_whenGetAllBuildings_givenValidGetRequest() throws Exception {
         // given
         var building = createBuilding();
         List<Building> buildings = Collections.singletonList(building);

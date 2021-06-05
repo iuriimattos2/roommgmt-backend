@@ -1,7 +1,36 @@
 package de.dlh.lhind.exercise.roommgmt.service;
 
-import static org.junit.jupiter.api.Assertions.*;
+import de.dlh.lhind.exercise.roommgmt.repository.RoomRepository;
+import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
 
-class RoomServiceTest {
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+@SpringBootTest
+public class RoomServiceTest {
+
+    @Mock
+    private RoomRepository mockedRoomRepository;
+    private RoomService roomService;
+
+    @BeforeEach
+    public void setUp() {
+        roomService = new RoomService(mockedRoomRepository);
+    }
+
+    @Test(expected=NullPointerException.class)
+    public void shouldCallRepository_whenGetAllRooms_givenNullObject() {
+        // when
+        when(mockedRoomRepository.findAll()).thenReturn(null);
+        var result = roomService.getAllRooms();
+
+        // then
+        assertThat(result).hasSize(1);
+        verify(mockedRoomRepository).findAll();
+    }
 
 }

@@ -33,4 +33,14 @@ public class Room {
     @Basic(optional = false)
     private Boolean projectorPresent;
 
+    public Room(Building building,
+                @NotNull String roomNumber,
+                @Size(min = 1, max = 9999, message = "Amount of seats must be between 1 and 9999") Integer seats,
+                Boolean projectorPresent) {
+        this.building = building;
+        this.roomNumber = roomNumber;
+        this.seats = seats;
+        this.projectorPresent = projectorPresent;
+    }
+
 }
