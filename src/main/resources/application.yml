@@ -15,3 +15,17 @@ server:
   port: 8088
   error:
     include-message: always
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    com.howtodoinjava: DEBUG
+    org.hibernate: ERROR
+  file:
+    name: logs/roommgmt-exercise.log
+
+
+

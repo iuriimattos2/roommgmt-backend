@@ -1,6 +1,6 @@
 package de.dlh.lhind.exercise.roommgmt.service;
 
-import de.dlh.lhind.exercise.roommgmt.exception.NotFoundException;
+import de.dlh.lhind.exercise.roommgmt.exception.ResourceNotFoundException;
 import de.dlh.lhind.exercise.roommgmt.model.Building;
 import de.dlh.lhind.exercise.roommgmt.repository.BuildingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class BuildingService {
 
     public Building getBuildingById(String buildingNumber) {
         return buildingRepository.getBuildingById(buildingNumber)
-                .orElseThrow(() -> new NotFoundException("Building by number " + buildingNumber + " was not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Building by number " + buildingNumber + " was not found"));
     }
 
     public List<Building> getPublicBuildings(Boolean publicAccess) {
