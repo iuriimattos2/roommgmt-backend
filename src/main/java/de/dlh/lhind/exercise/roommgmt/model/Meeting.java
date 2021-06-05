@@ -1,9 +1,6 @@
 package de.dlh.lhind.exercise.roommgmt.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -13,6 +10,7 @@ import java.time.Instant;
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "Meeting")
 public class Meeting {
 
@@ -32,12 +30,5 @@ public class Meeting {
 
     @Basic(optional = false)
     private Instant end;
-
-    public Meeting(@NotNull Room room, String topic, Instant start, Instant end) {
-        this.room = room;
-        this.topic = topic;
-        this.start = start;
-        this.end = end;
-    }
 
 }

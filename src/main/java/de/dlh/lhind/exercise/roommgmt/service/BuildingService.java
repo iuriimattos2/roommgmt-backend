@@ -13,6 +13,7 @@ import java.util.List;
 @Transactional
 public class BuildingService {
 
+    @Autowired
     private final BuildingRepository buildingRepository;
 
     @Autowired

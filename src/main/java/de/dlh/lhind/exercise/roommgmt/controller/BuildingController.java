@@ -14,10 +14,12 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/buildings")
 public class BuildingController {
 
+    @Autowired
     private final BuildingService buildingService;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(BuildingController.class);
 
     @Autowired
@@ -25,21 +27,21 @@ public class BuildingController {
         this.buildingService = buildingService;
     }
 
-    @PostMapping("/buildings")
+    @PostMapping
     public ResponseEntity<Building> addBuilding(@Valid @RequestBody Building building) {
         LOGGER.info("Add Building: {}", building);
         var newBuilding = buildingService.addBuilding(building);
         return new ResponseEntity<>(newBuilding, HttpStatus.CREATED);
     }
 
-    @PutMapping("/buildings")
+    @PutMapping
     public ResponseEntity<Building> updateBuilding(@RequestBody Building building) {
         LOGGER.info("Update Building: {}", building);
         var updateBuilding = buildingService.updateBuilding(building);
         return new ResponseEntity<>(updateBuilding, HttpStatus.OK);
     }
 
-    @DeleteMapping("/buildings/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Building> deleteBuildingById(@PathVariable("id") Long id) {
         LOGGER.info("Delete Building: {}", id);
         buildingService.deleteBuildingById(id);
@@ -51,21 +53,21 @@ public class BuildingController {
             response = Building.class,
             responseContainer = "List",
             produces = "application/json")
-    @GetMapping(value = {"", "/", "/buildings"})
+    @GetMapping(value = {"", "/"})
     public ResponseEntity<List<Building>> getAllBuildings() {
         LOGGER.info("Get All Buildings");
         List<Building> buildings = buildingService.getAllBuildings();
         return new ResponseEntity<>(buildings, HttpStatus.OK);
     }
 
-    @GetMapping("/buildings/{buildingNumber}")
+    @GetMapping("/{buildingNumber}")
     public ResponseEntity<Building> getBuildingById(@PathVariable("buildingNumber") String buildingNumber) {
         LOGGER.info("Get Building by buildingNumber: {}", buildingNumber);
         var building = buildingService.getBuildingById(buildingNumber);
         return new ResponseEntity<>(building, HttpStatus.OK);
     }
 
-    @GetMapping("/buildings/public")
+    @GetMapping("/public")
     public ResponseEntity<List<Building>> getPublicBuildings() {
         LOGGER.info("Get All Public Buildings");
         List<Building> building = buildingService.getPublicBuildings();

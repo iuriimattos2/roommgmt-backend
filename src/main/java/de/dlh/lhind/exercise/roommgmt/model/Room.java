@@ -1,9 +1,6 @@
 package de.dlh.lhind.exercise.roommgmt.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -13,6 +10,7 @@ import javax.validation.constraints.Size;
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "Room")
 public class Room {
 
@@ -34,12 +32,5 @@ public class Room {
 
     @Basic(optional = false)
     private Boolean projectorPresent;
-
-    public Room(Building building, String roomNumber, Integer seats, Boolean projectorPresent) {
-        this.building = building;
-        this.roomNumber = roomNumber;
-        this.seats = seats;
-        this.projectorPresent = projectorPresent;
-    }
 
 }
