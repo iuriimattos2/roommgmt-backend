@@ -13,7 +13,6 @@ import java.util.List;
 @Transactional
 public class RoomService {
 
-    @Autowired
     private final RoomRepository roomRepository;
 
     @Autowired
