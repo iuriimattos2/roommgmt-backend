@@ -16,7 +16,7 @@ public interface BuildingRepository  extends JpaRepository<Building, Long> {
     Optional<Building> getBuildingById(@Param("buildingNumber") String buildingNumber);
 
     @Query("from Building b where b.publicAccess = true")
-    List<Building> getPublicBuildings(Boolean publicAccess);
+    List<Building> getPublicBuildings();
 
     void deleteBuildingById(Long id);
 
