@@ -1,6 +1,5 @@
 package de.dlh.lhind.exercise.roommgmt.controller;
 
-import de.dlh.lhind.exercise.roommgmt.model.Building;
 import de.dlh.lhind.exercise.roommgmt.model.Room;
 import de.dlh.lhind.exercise.roommgmt.service.RoomService;
 import io.swagger.annotations.ApiOperation;
@@ -12,12 +11,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
+@RequestMapping("/rooms")
 public class RoomController {
 
+    @Autowired
     private final RoomService roomService;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(BuildingController.class);
 
     @Autowired
@@ -25,21 +26,21 @@ public class RoomController {
         this.roomService = roomService;
     }
 
-    @PostMapping("/rooms")
+    @PostMapping
     public ResponseEntity<Room> addRoom(@RequestBody Room room) {
         LOGGER.info("Add Room: {}", room);
         var newRoom = roomService.addRoom(room);
         return new ResponseEntity<>(newRoom, HttpStatus.CREATED);
     }
 
-    @PutMapping("/rooms")
+    @PutMapping
     public ResponseEntity<Room> updateRoom(@RequestBody Room room) {
         LOGGER.info("Update Room: {}", room);
         var updateRoom = roomService.updateRoom(room);
         return new ResponseEntity<>(updateRoom, HttpStatus.OK);
     }
 
-    @DeleteMapping("/rooms/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Room> deleteRoomById(@PathVariable("id") Long id) {
         LOGGER.info("Delete Room: {}", id);
         roomService.deleteRoomById(id);
@@ -51,14 +52,14 @@ public class RoomController {
             response = Room.class,
             responseContainer = "List",
             produces = "application/json")
-    @GetMapping("/rooms")
+    @GetMapping
     public ResponseEntity<List<Room>> getAllRooms() {
         LOGGER.info("Get All Rooms");
         List<Room> rooms =  roomService.getAllRooms();
         return new ResponseEntity<>(rooms, HttpStatus.OK);
     }
 
-    @GetMapping("/rooms/{roomNumber}")
+    @GetMapping("/{roomNumber}")
     public ResponseEntity<Room> getRoomById(@PathVariable("roomNumber") String roomNumber) {
         LOGGER.info("Get Room by roomNumber: {}", roomNumber);
         var room =  roomService.getRoomById(roomNumber);
@@ -80,7 +81,7 @@ public class RoomController {
         return new ResponseEntity<>(building, HttpStatus.OK);
     }
 
-    @GetMapping("/rooms/public")
+    @GetMapping("/public")
     public ResponseEntity<List<Room>> getPublicBuildings() {
         LOGGER.info("Get All Public Rooms");
         List<Room> rooms = roomService.getPublicRooms();

@@ -1,9 +1,6 @@
 package de.dlh.lhind.exercise.roommgmt.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -12,6 +9,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "Building")
 public class Building {
 
@@ -29,7 +27,7 @@ public class Building {
     @Basic(optional = false)
     private Boolean publicAccess;
 
-    public Building(String buildingNumber, String description, Boolean publicAccess) {
+    public Building(@NotNull String buildingNumber, String description, Boolean publicAccess) {
         this.buildingNumber = buildingNumber;
         this.description = description;
         this.publicAccess = publicAccess;

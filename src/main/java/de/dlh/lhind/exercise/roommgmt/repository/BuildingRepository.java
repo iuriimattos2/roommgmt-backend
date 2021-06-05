@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface BuildingRepository  extends JpaRepository<Building, Long> {
+public interface BuildingRepository extends JpaRepository<Building, Long> {
 
     @Query("from Building b where b.buildingNumber = (:buildingNumber)")
     Optional<Building> getBuildingById(@Param("buildingNumber") String buildingNumber);
