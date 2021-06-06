@@ -12,12 +12,12 @@
 # Architektur
 <img src="https://image.ibb.co/bDRu8x/Image2.png" width="350px" />
 
-# Git Struktur
-* [./src/](src/) - Source code
-
 # Screenshot
 
 <img src="https://i.imgur.com/yv4wIof.jpg" width="500px" />
+
+# Git Struktur
+* [./src/](src/) - Source code
 
 # Projektbeschreibung
 
