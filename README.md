@@ -2,8 +2,6 @@
 
 <img src="https://image.ibb.co/nMxqgH/Image3.png" width="500px" />
 
-[![Build Status](https://travis-ci.org/joumenharzli/survey-example-spring-boot-angular.svg?branch=master)](https://travis-ci.org/senoramarillo/roommgmt-backend)
-
 # Wiki
 * [Information über H2 Database login, scratch.http, Swagger UI, JaCoCo](https://github.com/senoramarillo/roommgmt-exercise/wiki)
 
