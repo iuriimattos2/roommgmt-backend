@@ -6,6 +6,9 @@
 # Git Struktur
 * [./src/](src/) - Source code
 
+## Architecture
+<img src="https://image.ibb.co/bDRu8x/Image2.png" width="350px" />
+
 # Projektbeschreibung
 
 Dies ist das Basisprojekt für die "Room Management"-Übung. Ziel dieser Übung ist der Einsatz der in den vorherigen
