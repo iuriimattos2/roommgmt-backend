@@ -8,7 +8,7 @@
 # Git Struktur
 * [./src/](src/) - Source code
 
-## Architecture
+# Architektur
 <img src="https://image.ibb.co/bDRu8x/Image2.png" width="350px" />
 
 # Projektbeschreibung
