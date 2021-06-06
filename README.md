@@ -6,6 +6,9 @@
 
 [Spring Boot Backend Repository](https://github.com/senoramarillo/roommgmt-backend)
 
+# Screenshot
+
+<img src="https://i.imgur.com/yv4wIof.jpg" width="500px" />
 
 # Wiki
 * [Information über H2 Database login, scratch.http, Swagger UI, JaCoCo](https://github.com/senoramarillo/roommgmt-exercise/wiki)
