@@ -1,4 +1,4 @@
-# Übungsprojekt "Room Management"
+# Projekt "Room Management"
 
 # Wiki
 * [Information über H2 Database login, scratch.http, Swagger UI, JaCoCo](https://github.com/senoramarillo/roommgmt-exercise/wiki)
