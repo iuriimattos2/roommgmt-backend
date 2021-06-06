@@ -1,5 +1,7 @@
 # Übungsprojekt "Room Management"
 
+<img src="https://image.ibb.co/nMxqgH/Image3.png" width="500px" />
+
 # Wiki
 * [Information über H2 Database login, scratch.http, Swagger UI, JaCoCo](https://github.com/senoramarillo/roommgmt-exercise/wiki)
 
