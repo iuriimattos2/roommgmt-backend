@@ -12,7 +12,7 @@
 # Architektur
 <img src="https://image.ibb.co/bDRu8x/Image2.png" width="350px" />
 
-<img src="https://i.imgur.com/p60XyxC.jpg="350px" />
+<img src="https://i.imgur.com/p60XyxC.jpg" width="350px" />
 
 # Screenshot
 
