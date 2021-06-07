@@ -14,6 +14,8 @@
 
 <img src="https://i.imgur.com/p60XyxC.jpg" width="850px" />
 
+[Spring Boot](https://spring.io/projects/spring-boot) version 2.5.0.
+
 # Screenshot
 
 <img src="https://i.imgur.com/yv4wIof.jpg" width="500px" />
