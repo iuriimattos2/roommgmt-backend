@@ -2,9 +2,7 @@
 
 <img src="https://i.imgur.com/HdomqRH.png" width="250" />
 
-[Fullstack Repository Angular Frontend](https://github.com/senoramarillo/roommgmt-fullstack)
-
-[Spring Boot Backend Repository](https://github.com/senoramarillo/roommgmt-backend)
+[Fullstack Repository](https://github.com/senoramarillo/roommgmt-fullstack)
 
 # Wiki
 * [Information über H2 Database login, scratch.http, Swagger UI, JaCoCo](https://github.com/senoramarillo/roommgmt-exercise/wiki)
