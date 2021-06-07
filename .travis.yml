@@ -2,6 +2,7 @@ language: java
 sudo: true
 jdk:
   - oraclejdk11
+
 deploy:
   provider: heroku
   api-key:
