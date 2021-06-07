@@ -140,7 +140,6 @@ Fehlerbehandlung erfolgt durch den Einsatz von HTTP-Statuscodes.
 Die Anwendung muss eine Drei-Schicht-Architektur implementieren:
 
 ```mermaid
-graph TD;
   A[REST Controller] --> B[Service];
   B --> C[Repository];
 ```
