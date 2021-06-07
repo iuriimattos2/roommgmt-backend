@@ -14,7 +14,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/buildings")
+@RequestMapping(value = {"/buildings"})
 public class BuildingController {
 
     @Autowired
@@ -53,7 +53,7 @@ public class BuildingController {
             response = Building.class,
             responseContainer = "List",
             produces = "application/json")
-    @GetMapping(value = {"", "/"})
+    @GetMapping
     public ResponseEntity<List<Building>> getAllBuildings() {
         LOGGER.info("Get All Buildings");
         List<Building> buildings = buildingService.getAllBuildings();
