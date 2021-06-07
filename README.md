@@ -1,6 +1,6 @@
 # Übungsprojekt "Room Management"
 
-<img src="https://i.imgur.com/YkRNXNp.png" width="500px" />
+<img src="https://i.imgur.com/HdomqRH.png" width="300" />
 
 [Angular Frontend Repository](https://github.com/senoramarillo/roommgmt-frontend)
 
