@@ -17,9 +17,7 @@ import java.util.List;
 @RequestMapping(value = {"/buildings"})
 public class BuildingController {
 
-    @Autowired
     private final BuildingService buildingService;
-
     private static final Logger LOGGER = LoggerFactory.getLogger(BuildingController.class);
 
     @Autowired

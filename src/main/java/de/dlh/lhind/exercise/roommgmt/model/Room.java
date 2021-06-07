@@ -22,7 +22,7 @@ public class Room {
     private Building building;
 
     @Basic(optional = false)
-    @Column(unique = true)
+   // @Column(unique = true)
     @NotNull
     private String roomNumber;
 

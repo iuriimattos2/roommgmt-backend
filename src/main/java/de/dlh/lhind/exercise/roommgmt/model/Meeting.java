@@ -18,7 +18,7 @@ public class Meeting {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     @NotNull
     private Room room;
 
@@ -30,5 +30,12 @@ public class Meeting {
 
     @Basic(optional = false)
     private Instant end;
+
+    public Meeting(@NotNull Room room, String topic, Instant start, Instant end) {
+        this.room = room;
+        this.topic = topic;
+        this.start = start;
+        this.end = end;
+    }
 
 }

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import de.dlh.lhind.exercise.roommgmt.model.Building;
 import de.dlh.lhind.exercise.roommgmt.service.BuildingService;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -38,6 +39,7 @@ class BuildingControllerTest {
     public static final String BUILDING_URL = "/buildings/";
 
     @Test
+    @DisplayName("Get All Buildings")
     void shouldReturnAllBuildings_whenGetAllBuildings_givenValidGetRequest() throws Exception {
         // given
         var building = createBuilding();
@@ -54,6 +56,7 @@ class BuildingControllerTest {
     }
 
     @Test
+    @DisplayName("Add Buildings")
     void shouldCreateBuilding_whenAddBuilding_givenValidPostRequest() throws Exception {
         // given
         var building = createBuilding();
@@ -70,6 +73,7 @@ class BuildingControllerTest {
     }
 
     @Test
+    @DisplayName("Update Buildings")
     void shouldUpdateBuilding_whenUpdateBuilding_givenValidPutRequest() throws Exception {
         // given
         var building = createBuilding();
@@ -86,6 +90,7 @@ class BuildingControllerTest {
     }
 
     @Test
+    @DisplayName("Delete Buildings")
     void shouldUDeleteBuilding_whenDeleteBuilding_givenValidRequest() throws Exception {
         //when
         doNothing().when(mockedBuildingService).deleteBuildingById(BUILDING_ID);

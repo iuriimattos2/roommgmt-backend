@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import de.dlh.lhind.exercise.roommgmt.model.Building;
 import de.dlh.lhind.exercise.roommgmt.model.Room;
 import de.dlh.lhind.exercise.roommgmt.service.RoomService;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -44,6 +45,7 @@ class RoomControllerTest {
     public static final Boolean PUBLIC_ACCESS = true;
 
     @Test
+    @DisplayName("Get All Rooms")
     void shouldReturnAllRooms_whenGetAllRooms_givenValidGetRequest() throws Exception {
         // given
         var room = createRoom();
@@ -60,6 +62,7 @@ class RoomControllerTest {
     }
 
     @Test
+    @DisplayName("Add Room")
     void shouldCreateRoom_whenAddRoom_givenValidPostRequest() throws Exception {
         // given
         var room = createRoom();
@@ -76,6 +79,7 @@ class RoomControllerTest {
     }
 
     @Test
+    @DisplayName("Update Room")
     void shouldUpdateRoom_whenUpdateRoom_givenValidPutRequest() throws Exception {
         // given
         var room = createRoom();
@@ -92,6 +96,7 @@ class RoomControllerTest {
     }
 
     @Test
+    @DisplayName("Delete Room")
     void shouldUDeleteRoom_whenDeleteRoom_givenValidRequest() throws Exception {
         //when
         doNothing().when(mockedRoomService).deleteRoomById(ROOM_ID);
