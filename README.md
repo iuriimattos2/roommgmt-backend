@@ -1,4 +1,4 @@
-# Übungsprojekt "Room Management"
+# Projekt "Room Management"
 
 <img src="https://i.imgur.com/HdomqRH.png" width="250" />
 
