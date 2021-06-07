@@ -181,5 +181,3 @@ der Main-Klasse `de.dlh.lhind.exercise.roommgmt.RoommmgmtApplication` geklickt w
 
 Das Testen der REST-API erfolgt am besten unter Einsatz von *HTTP Scratch-Files*. Diese können direkt in der IntelliJ
 angelegt werden.
-
-**Viel Erfolg und viel Spaß!**
