@@ -2,7 +2,7 @@
 
 <img src="https://i.imgur.com/HdomqRH.png" width="250" />
 
-[Angular Frontend Repository](https://github.com/senoramarillo/roommgmt-frontend)
+[Fullstack Repository Angular Frontend](https://github.com/senoramarillo/roommgmt-fullstack)
 
 [Spring Boot Backend Repository](https://github.com/senoramarillo/roommgmt-backend)
 
