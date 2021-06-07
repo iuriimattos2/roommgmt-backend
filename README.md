@@ -21,6 +21,9 @@
 # Git Struktur
 * [./src/](src/) - Source code
 
+# Swagger UI
+Swagger UI: http://localhost:8088/swagger-ui/index.html
+
 # Projektbeschreibung
 
 Dies ist das Basisprojekt für die "Room Management"-Übung. Ziel dieser Übung ist der Einsatz der in den vorherigen
