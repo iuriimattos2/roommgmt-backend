@@ -3,6 +3,8 @@ package de.dlh.lhind.exercise.roommgmt.service;
 import de.dlh.lhind.exercise.roommgmt.repository.BuildingRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -15,6 +17,8 @@ public class BuildingServiceTest {
 
     @Mock
     private BuildingRepository mockedBuildingRepository;
+
+    @InjectMocks
     private BuildingService buildingService;
 
     @BeforeEach
@@ -23,13 +27,16 @@ public class BuildingServiceTest {
     }
 
     @Test(expected=NullPointerException.class)
-    public void shouldCallRepository_whenGetAllBuildings_givenNullObject() {
-        // when
+    @DisplayName("Get all buildings by giving null request")
+    public void shouldCallRepository_whenGetAllBuildings_givenNullRequest() {
+        //when
         when(mockedBuildingRepository.findAll()).thenReturn(null);
+
+        // Execute the service call
         var result = buildingService.getAllBuildings();
 
-        // then
-        assertThat(result).hasSize(1);
+        // Assert the response
+        assertThat(result).isNull();
         verify(mockedBuildingRepository).findAll();
     }
 

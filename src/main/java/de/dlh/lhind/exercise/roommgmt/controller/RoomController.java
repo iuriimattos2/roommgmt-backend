@@ -16,9 +16,7 @@ import java.util.List;
 @RequestMapping("/rooms")
 public class RoomController {
 
-    @Autowired
     private final RoomService roomService;
-
     private static final Logger LOGGER = LoggerFactory.getLogger(BuildingController.class);
 
     @Autowired
