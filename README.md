@@ -26,7 +26,7 @@
 * [./src/](src/) - Source code
 
 # Swagger UI
-Swagger UI: https://bit.ly/3w77Tri
+Link: https://bit.ly/3w77Tri
 
 # Projektbeschreibung
 
