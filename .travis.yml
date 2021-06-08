@@ -1,19 +1,17 @@
 language: java
 sudo: true
 jdk:
-  - oraclejdk11
-
+- oraclejdk11
 deploy:
   provider: heroku
   app: roommgmt-backend
   api_key:
-    secure: d0ee007e-41f8-4d9b-83f8-467dc9f06056
+    secure: uRjzI2Zn9JWuTXh4DH5hlXiMKD5/t+5KkI+ow2++T7Uwl1/+BhyF97P8KJiz4gzdBWsGYP5cCB2hboKmQjjn5qjfl976nQyN7pRlYlNrFUbV5aQ1OdFrdUvbJKAuPA4BgBVs5rk3iTps7oi2KU1VOP7o5NKtmFBT0oLL6bbPIFPceRrpz5FFTu/8Cb0wWo3ZBCCNdXUm45iwbFx75asoSX9TAFfyDRy621m0U5xSKbd3bqiR6gHBIlqYVHWw3wZjCyhkPqefo0Nz06HjtMk+UnOas1uKgp5NW7pkhC4piFHtpcbBSFVj1FQB1YDevgoVEDTUz4dBowUbGC/WziZGVOFue/PyKF8RTTlCBQyDoKc8NZFL0Ur9npb6FbC1+2S46VGVf125fU43hDOhwKobtXf16Y3pFZnzzakJTk5HHItiReRk1Y2ENQxbreSSkwX+7+mGO+S8yO1p3hwDeOjsx13F65VdvVMoIUIVHB7bz/wSs1cbnBg4c9y+yvlQrGHIkWKtXo5Z2WcjY8dNp8IWZhVKGtr1B873Z6uomwjvgfdQN81Jz5JtcibUivZKYVRzB/blo6EDVoYfaOMyuxzBD7M7BTjGb4zIVpQ7ATgGzc1hOjPQ8dNxsN2TS0FTrRJoQt6JUZ+OETbKUp0l8A7sx3NILwtDLbCtWyMbMAKvYsY=
   on:
     branch: master
 notifications:
   email:
     on_success: never
     on_failure: never
-
 before_install:
-  - chmod +x mvnw
+- chmod +x mvnw
