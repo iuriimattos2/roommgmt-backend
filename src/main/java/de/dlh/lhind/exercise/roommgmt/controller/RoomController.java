@@ -17,7 +17,7 @@ import java.util.List;
 public class RoomController {
 
     private final RoomService roomService;
-    private static final Logger LOGGER = LoggerFactory.getLogger(BuildingController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RoomController.class);
 
     @Autowired
     public RoomController(RoomService roomService) {
