@@ -16,24 +16,9 @@
     <name>Room Management Exercise</name>
     <description>A simple room management exercise.</description>
 
-    <organization>
-        <name>Lufthansa Industry Solutions</name>
-        <url>https://www.lufthansa-industry-solutions.com</url>
-    </organization>
-
-    <developers>
-        <developer>
-            <name>Stephan Anft</name>
-            <email>stephan.anft@lhind.dlh.de</email>
-        </developer>
-        <developer>
-            <name>Holger Bergunde</name>
-            <email>holger.bergunde@lhind.dlh.de</email>
-        </developer>
-    </developers>
-
     <properties>
         <java.version>11</java.version>
+        <docker.image.prefix>senoramarillo</docker.image.prefix>
     </properties>
 
     <dependencies>
@@ -155,6 +140,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
