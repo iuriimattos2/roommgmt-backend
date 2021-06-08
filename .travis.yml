@@ -6,8 +6,10 @@ jdk:
 deploy:
   provider: heroku
   api-key:
-    secure: $HEROKU_API_KEY
+    secure: XdtDhNlqkFcVzqCzzafjeZ6JpDofb3XHUpIoDhVbfoGoW0tP5Tlk/FhCn1qKR6zCKl/B/0yg0AaHlZheeEAmB4a7WwPNjURd+kIizyInm2ZPkBPI2jgTXAqhqkQoPQcC6knd5tBB91AZmnjtPnhJhCF1Rn1yDI5OBxzN1zf3MCgQ4VGBu8lrjgfNU+x4UssIR+9d00FxT8HqOSwcjTpzVg2jpgi4vc7ldT4whCd+86sROji7pXDT3TqifY7J+qsQj5dIY81CHBZ1yx2xVcclSCcSQMR0HHBdvrKJRXikwoHomLsV8FAAuzXED9btXAmwkb0ZmI8ek/bCA5/Cq6owIyPKWst7Tk82fdIq3d2P5efXjlLKlKNIjAqOgyKdgeL5jV6XYb+o+Mh64AEX8fmRZkAbQ+KOOETVxiRkksEESF4ohmb60HphSKjKCBtacLQxkGWyd2TU2DAqD+AcaqAfIdBmiKCPa0nEMx1IV8aq/eTSqpYAbKu7/ANFPxYgppU5j9GOk54RvdwtpXAUhJN343wwQFc96TzP/bqOpAZTxsAnkMCGdBvtHMxuk7QLn6SRCerDR10oWARdQ3OyAX8sbAArUvccc3d92iGkZIROzgk4Lk6bIRlK9gABYyAOlrHcT4Oj/2jSj5TA6Zey6M5epODVRzKHLYt5nG3CRDbDOlI=
   app: roommgmt-backend
+  on:
+    repo: senoramarillo/roommgmt-backend
 
 before_install:
   - chmod +x mvnw
