@@ -13,7 +13,7 @@ import java.util.Collections;
 @SpringBootApplication
 public class RoommgmtApplication {
 
-    public static final String ALLOW_ORIGIN = "Access-Control-Allow-Origin";
+    public static final String ACCESS_CONTROL_ALLOW_ORIGIN = "Access-Control-Allow-Origin";
 
     public static void main(String[] args) {
         SpringApplication.run(RoommgmtApplication.class, args);
@@ -24,11 +24,11 @@ public class RoommgmtApplication {
         var corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowCredentials(true);
         corsConfiguration.setAllowedOrigins(Collections.singletonList("http://localhost:4200"));
-        corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", ALLOW_ORIGIN, "Content-Type",
+        corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", ACCESS_CONTROL_ALLOW_ORIGIN, "Content-Type",
                 "Accept", "Authorization", "Origin, Accept", "X-Requested-With",
                 "Access-Control-Request-Method", "Access-Control-Request-Headers"));
         corsConfiguration.setExposedHeaders(Arrays.asList("Origin", "Content-Type", "Accept", "Authorization",
-                ALLOW_ORIGIN, ALLOW_ORIGIN, "Access-Control-Allow-Credentials"));
+                ACCESS_CONTROL_ALLOW_ORIGIN, ACCESS_CONTROL_ALLOW_ORIGIN, "Access-Control-Allow-Credentials"));
         corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         var urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
         urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
