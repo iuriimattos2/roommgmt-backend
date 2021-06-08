@@ -4,14 +4,14 @@ jdk:
 - oraclejdk11
 addons:
   sonarcloud:
-    organization: "senoramarillo"
+    organization: senoramarillo
     token:
       secure: R91ceZ9XefdAUHQ+Ym/yBwLCFAOfBoc3oJwMjMOWUnxCM8K8rkaoJchoxpERHMKudae1jhpXbesCwSyUlBWjCcWj+zWVWj9jm4/cYY16RlTIiLHsrQ3LETEENSjfjWYXV5xXkwGJ4YJY/ckveU5VZAKD1TCgDQkeS2BI64+fvQwYhyEAxZ+sSvYIkQRuPxKdz980Z6VPVlZQiOJhaULSRWf59uTBQCdffltfN4u1PdWjkYCNx2fKhVrm3gbjB6tDben5iRaE6uAMuA/n0wpJn+Hz0K8jT5srh4MRfcJO9q+cdDq58lZS3ZGFMnZlERRNDnO4zP6xCcVWwOgSfYzc0pzo5vKCJqWSQJmoGU1eM+vNPsV24Sb/qrGq2GoVYaiKiDUoLf6cpUbba6ndPzGcLSKM4GLSbx1naN3TfWXqprK64g8IC6Cmbts+cPSyXKDGfigo6FF6cF4bsmA9PdJvQJDFrNAZj0GXu0QVxkFaH9Z4q6qo/Dm0pxdoQzrvSdKm+U8Yug/RI2CxPzUbk7Ioo0l14loGaPM0nHKA8VIGt3TsYr/b+fpc22rwcQtVn01CI4RyQSgfB72XOSPQwhviNZS+7uXua7ntyH0hn70tkJtVbaSj7DA/y00W53RHoUdVYLL/mq4FggHqcEKkHK9qPKe3xz0lhPivobM2q1pxGKA=
 deploy:
   provider: heroku
   app: roommgmt-backend
   api_key:
-    secure: uRjzI2Zn9JWuTXh4DH5hlXiMKD5/t+5KkI+ow2++T7Uwl1/+BhyF97P8KJiz4gzdBWsGYP5cCB2hboKmQjjn5qjfl976nQyN7pRlYlNrFUbV5aQ1OdFrdUvbJKAuPA4BgBVs5rk3iTps7oi2KU1VOP7o5NKtmFBT0oLL6bbPIFPceRrpz5FFTu/8Cb0wWo3ZBCCNdXUm45iwbFx75asoSX9TAFfyDRy621m0U5xSKbd3bqiR6gHBIlqYVHWw3wZjCyhkPqefo0Nz06HjtMk+UnOas1uKgp5NW7pkhC4piFHtpcbBSFVj1FQB1YDevgoVEDTUz4dBowUbGC/WziZGVOFue/PyKF8RTTlCBQyDoKc8NZFL0Ur9npb6FbC1+2S46VGVf125fU43hDOhwKobtXf16Y3pFZnzzakJTk5HHItiReRk1Y2ENQxbreSSkwX+7+mGO+S8yO1p3hwDeOjsx13F65VdvVMoIUIVHB7bz/wSs1cbnBg4c9y+yvlQrGHIkWKtXo5Z2WcjY8dNp8IWZhVKGtr1B873Z6uomwjvgfdQN81Jz5JtcibUivZKYVRzB/blo6EDVoYfaOMyuxzBD7M7BTjGb4zIVpQ7ATgGzc1hOjPQ8dNxsN2TS0FTrRJoQt6JUZ+OETbKUp0l8A7sx3NILwtDLbCtWyMbMAKvYsY=
+    secure: V+yZX8JWuJ72VFMM17sMx2bGNQkU7TZVpF3yrsniNxCbTyhRfBeffPPcA7iRA7mJ9CO6KtmIOefYIx6AuYOqaQjLAQSBOLaN/u+xHzvc7RTHZa0SkWGGiApC4eSVz+K+qiSil97kfxpG/JWiBkUyqOihSWrwenJXK67joYXLo+R2mtkFQ8CoyBWTyTdQH9f5V83wDQxoobLL055oCNXO6DnFlhJ59cYf6pmRuklbrYLWMvJAoD2GKPa8IlLFQDCWabAcY64U8R+TpsvhePD3Onq4iUASm6MxFQmYnIaDQKFaVXjv7e/yoo3qFIIrubOnd7CAAxg53x/XsobN+0MhcPXASjG8Vb4DzxI2vNAoGY5fLy7yaVeYQwHdbAB4nZOobFeo1B3PuiI8RKRn1NA+Cxlv5gQtdPyKRE979MUl8I0ZmOv/9clU0nNUJAHwHvYEwmBGmLRFJtMsC8kQ6yufA5BMbnMOsMjmlCJoHtEoKLHmMJf2av8u0z+NQDc6tlyO+d3gqmtv9S3XqzYAOzWcWzbszQSKzWzvtUkF+c/8YfF6A5Vwn8ljhBZGCWPFKPXqRYdnV5aIKjVEc23AtZHy/k+udwiQmBMKERW3sdj00iS6TCxbwOs3b1pU6Mt2Tn4/Qu9MsJ0pcZl6B9Zo3nlk1bghApawyKkOV+lAtmEEin8=
   on:
     branch: master
 notifications:
@@ -19,8 +19,8 @@ notifications:
     on_success: never
     on_failure: never
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=senoramarillo_roommgmt-backend
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=senoramarillo_roommgmt-backend
 before_install:
 - chmod +x mvnw
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
