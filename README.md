@@ -3,6 +3,7 @@
 <img src="https://i.imgur.com/HdomqRH.png" width="250" />
 
 [![Build Status](https://api.travis-ci.com/senoramarillo/roommgmt-backend.svg?branch=master&status=started)](https://travis-ci.com/github/senoramarillo/roommgmt-backend)
+[![codecov](https://codecov.io/gh/senoramarillo/roommgmt-backend/branch/master/graph/badge.svg)](https://codecov.io/gh/senoramarillo/roommgmt-backend)
 
 [Fullstack Repository](https://github.com/senoramarillo/roommgmt-fullstack)
 
