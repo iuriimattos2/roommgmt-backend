@@ -7,7 +7,7 @@ deploy:
   provider: heroku
   app: roommgmt-backend
   api_key:
-    secure: GEFW6rWs5ETSqbhsdOSXB5ixjtvl7No4pQ0PDf9M3lHW4IGAQWZ9MfXH1BGQ2enxtm9cIy9KNqf2yQ0u+oJsEeNqv1Z5dTrqLa5rtCtVn0Kkt/FX/s61kin+WBt9Bc8EUNyTPIpFhoh9W0ce/BNxm2hmzcykrz1qVywOpYI6ahPBYQYBuqg6q7A47SPElfn+lFjyfjS5++xb8v/GwoAXXN2sWfMsdxNGFcJGjThBgcW5E6xzvQXAl9orqsQLS3H23T4t1GSuJR+CDNudpH4Tf1SatidqAHTiqUC1FMmKDIGPuEoVr2FL1dJiWdDp/fy/xjob7jCiZ6NWOtKmqQ1dzD3Iq/HidDe310u+aD8LBSKpdcf50h91jxh03RbF1XA1lBxsH7Q7CqZvsBen7kawwUn9pogM8ufrUgwayMCTz4mbfhAWoxlB9DdP8RR6vMT48h+oPbmIOFCil3VSbQ+6fHEwd0q7efqbKXpWkIpAB2lBlHv6NfG8Plxi5pbHAC+wdEQ5zLL38Hr79NjyPljxHa2+5Wb34zr+1vzmNse8Nr1vPqtqgSg6nkuNaEbGWisgenj842D4HMT3yTGxOdR0LyoSeUjBGtO2WLCucVRWYW6nCZItP1/p17teC4ncG1QDJYBmet4OBexvST1h+ZMtvi4lcaINHxlEe76YltgYMQs=
+    secure: d0ee007e-41f8-4d9b-83f8-467dc9f06056
   on:
     branch: master
 notifications:
