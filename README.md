@@ -69,7 +69,6 @@ Ein Gebäude hat die folgenden natürlichen Attribute:
 * Optionale Beschreibung
 * Ein Flag, ob ein öffentlicher Zugang möglich ist
 
-
 | Attribut        | Eigenschaften               |
 | --------------- | --------------------------- |
 | Building Number | `String`, required, unique  |
