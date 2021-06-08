@@ -26,7 +26,7 @@
 * [./src/](src/) - Source code
 
 # Swagger UI
-Swagger UI: https://roommgmt-backend.herokuapp.com/swagger-ui/index.html
+Swagger UI: https://bit.ly/3w77Tri
 
 # Projektbeschreibung
 
