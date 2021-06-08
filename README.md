@@ -20,7 +20,7 @@
 
 # Screenshot
 
-<img src="https://i.imgur.com/yv4wIof.jpg" width="700px" />
+<img src="https://i.imgur.com/yv4wIof.jpg" width="850px" />
 
 # Git Struktur
 * [./src/](src/) - Source code
