@@ -4,6 +4,7 @@
 
 [![Build Status](https://api.travis-ci.com/senoramarillo/roommgmt-backend.svg?branch=master&status=started)](https://travis-ci.com/github/senoramarillo/roommgmt-backend)
 [![codecov](https://codecov.io/gh/senoramarillo/roommgmt-backend/branch/master/graph/badge.svg)](https://codecov.io/gh/senoramarillo/roommgmt-backend)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=senoramarillo_roommgmt-backend&metric=alert_status)](https://sonarcloud.io/dashboard?id=senoramarillo_roommgmt-backend)
 
 [Fullstack Repository](https://github.com/senoramarillo/roommgmt-fullstack)
 
