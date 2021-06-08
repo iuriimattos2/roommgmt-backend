@@ -2,6 +2,11 @@ language: java
 sudo: true
 jdk:
 - oraclejdk11
+addons:
+  sonarcloud:
+    organization: "senoramarillo"
+    token:
+      secure: R91ceZ9XefdAUHQ+Ym/yBwLCFAOfBoc3oJwMjMOWUnxCM8K8rkaoJchoxpERHMKudae1jhpXbesCwSyUlBWjCcWj+zWVWj9jm4/cYY16RlTIiLHsrQ3LETEENSjfjWYXV5xXkwGJ4YJY/ckveU5VZAKD1TCgDQkeS2BI64+fvQwYhyEAxZ+sSvYIkQRuPxKdz980Z6VPVlZQiOJhaULSRWf59uTBQCdffltfN4u1PdWjkYCNx2fKhVrm3gbjB6tDben5iRaE6uAMuA/n0wpJn+Hz0K8jT5srh4MRfcJO9q+cdDq58lZS3ZGFMnZlERRNDnO4zP6xCcVWwOgSfYzc0pzo5vKCJqWSQJmoGU1eM+vNPsV24Sb/qrGq2GoVYaiKiDUoLf6cpUbba6ndPzGcLSKM4GLSbx1naN3TfWXqprK64g8IC6Cmbts+cPSyXKDGfigo6FF6cF4bsmA9PdJvQJDFrNAZj0GXu0QVxkFaH9Z4q6qo/Dm0pxdoQzrvSdKm+U8Yug/RI2CxPzUbk7Ioo0l14loGaPM0nHKA8VIGt3TsYr/b+fpc22rwcQtVn01CI4RyQSgfB72XOSPQwhviNZS+7uXua7ntyH0hn70tkJtVbaSj7DA/y00W53RHoUdVYLL/mq4FggHqcEKkHK9qPKe3xz0lhPivobM2q1pxGKA=
 deploy:
   provider: heroku
   app: roommgmt-backend
@@ -13,5 +18,9 @@ notifications:
   email:
     on_success: never
     on_failure: never
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=senoramarillo_roommgmt-backend
 before_install:
 - chmod +x mvnw
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
