@@ -5,11 +5,15 @@ jdk:
 
 deploy:
   provider: heroku
-  api-key:
-    secure: olwfiVI1wYxkVtxbckLwsI0VcFVnARnNNHWBKpxIhBdrPWr3znxy+diV3TGdBsA85ZhVkzoCd4HcmIhM6gQ8fCqF8y3T2cK+xMOyrVEm6PzA4z2hfW5mRzu9T7Ctmi6H+2ZGH7Fx63kyPxzasZXROa2W4s50oxxchtkfcxSNOhQr94WDIeE9XJ2IZCpU4ogtHEXxtQC4wjgQY4I6SKnf0st3q6xV1Tr7nfnheYezeh1AbybyHZ23zqJWLurDHfg6GF1PyFw+LF/uWdWFNbFqCQ5QORhOY5/dBKa8wsPnEIhuLiVjVs0JKtmZ8k9SVnCFIZ2UEzLOyclDalRbKKFq6ch39Ht4XzhgWYL+ztx9Nc/oGPbZBrWprO6lSZiH/rTyvAV7bg0b0L/Tj3m0Z4z94FtwdCd8vxuPJflPfPPRpn4cTZFZUCzxBIYd5VrhWtB+j+Dm4DqiKwsUPjGjb+XgvkbaqK8ElnWdq/DXScjZBmOv7H9od/2/YENbQak/koh7aM1R4WHiNeLeYEy00cHvaCgin2UcHZhaNfb1Li+i5K0yH60r6fcb+Lb4Mj0daSp4FHqhC4CBt51S4btOJG9T15s1b+M/8J6j5dBGD5CJWWj/SFktpvw46Pbqzg+tprqWvEwOOAiaR7Iz2IETtSPKZHwtCAk2MrKkuCf4ZSL5ETg=
   app: roommgmt-backend
+  api_key:
+    secure: olwfiVI1wYxkVtxbckLwsI0VcFVnARnNNHWBKpxIhBdrPWr3znxy+diV3TGdBsA85ZhVkzoCd4HcmIhM6gQ8fCqF8y3T2cK+xMOyrVEm6PzA4z2hfW5mRzu9T7Ctmi6H+2ZGH7Fx63kyPxzasZXROa2W4s50oxxchtkfcxSNOhQr94WDIeE9XJ2IZCpU4ogtHEXxtQC4wjgQY4I6SKnf0st3q6xV1Tr7nfnheYezeh1AbybyHZ23zqJWLurDHfg6GF1PyFw+LF/uWdWFNbFqCQ5QORhOY5/dBKa8wsPnEIhuLiVjVs0JKtmZ8k9SVnCFIZ2UEzLOyclDalRbKKFq6ch39Ht4XzhgWYL+ztx9Nc/oGPbZBrWprO6lSZiH/rTyvAV7bg0b0L/Tj3m0Z4z94FtwdCd8vxuPJflPfPPRpn4cTZFZUCzxBIYd5VrhWtB+j+Dm4DqiKwsUPjGjb+XgvkbaqK8ElnWdq/DXScjZBmOv7H9od/2/YENbQak/koh7aM1R4WHiNeLeYEy00cHvaCgin2UcHZhaNfb1Li+i5K0yH60r6fcb+Lb4Mj0daSp4FHqhC4CBt51S4btOJG9T15s1b+M/8J6j5dBGD5CJWWj/SFktpvw46Pbqzg+tprqWvEwOOAiaR7Iz2IETtSPKZHwtCAk2MrKkuCf4ZSL5ETg=
   on:
-    repo: senoramarillo/roommgmt-backend
+    branch: master
+notifications:
+  email:
+    on_success: never
+    on_failure: never
 
 before_install:
   - chmod +x mvnw
