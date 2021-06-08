@@ -18,7 +18,6 @@
 
     <properties>
         <java.version>11</java.version>
-        <docker.image.prefix>senoramarillo</docker.image.prefix>
     </properties>
 
     <dependencies>
