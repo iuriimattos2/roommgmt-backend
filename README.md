@@ -7,8 +7,6 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=senoramarillo_roommgmt-backend&metric=coverage)](https://sonarcloud.io/dashboard?id=senoramarillo_roommgmt-backend)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=senoramarillo_roommgmt-backend&metric=sqale_index)](https://sonarcloud.io/dashboard?id=senoramarillo_roommgmt-backend)
 
-[Angular Repository](https://github.com/senoramarillo/roommgmt-angular)
-
 [React Repository](https://github.com/senoramarillo/roommgmt-react)
 
 # Demo
